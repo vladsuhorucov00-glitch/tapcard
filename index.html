@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>tapcard — NFC-карты для отзывов в Яндекс Картах и 2ГИС</title>
-<meta name="description" content="NFC-карта для бизнеса: клиент прикладывает телефон — открывается ваша карточка в Яндекс Картах или 2ГИС. Отзыв в 2 клика, без приложений и поиска. Брендирование, подставка, доставка по России.">
+<meta name="description" content="NFC-карта для бизнеса: клиент прикладывает телефон — открывается ваша карточка в Яндекс Картах или 2ГИС. Отзыв в 2 клика, без приложений и поиска. Брендирование, подставка, настройка под ключ.">
 <meta name="theme-color" content="#070A09">
 <meta property="og:type" content="website">
 <meta property="og:title" content="tapcard — отзывы в 2 клика одним касанием">
@@ -432,7 +432,7 @@ p{margin:0}
 .chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.65;flex:none}
 .marquee + .marquee{margin-top:12px}
 
-/* ---------- тарифы ---------- */
+/* ---------- комплекты ---------- */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 .price-card{
   position:relative;padding:30px;border-radius:24px;border:1px solid var(--line);
@@ -456,9 +456,10 @@ p{margin:0}
 }
 .price-name{font-size:1.02rem;font-weight:800;margin-bottom:5px}
 .price-desc{font-size:.82rem;color:var(--muted);min-height:38px}
-.price-value{margin:20px 0 4px;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
-.price-value b{font-size:2rem;font-weight:800;letter-spacing:-.04em;line-height:1}
-.price-value s{font-size:.9rem;color:var(--muted-2)}
+.price-ask{
+  margin:20px 0 4px;font-size:1.16rem;font-weight:800;letter-spacing:-.02em;
+  color:#DFF7EA;line-height:1.2;
+}
 .price-unit{font-size:.78rem;color:var(--muted-2);margin-bottom:22px}
 .price-list{list-style:none;margin:0 0 26px;padding:0;display:flex;flex-direction:column;gap:11px;flex:1}
 .price-list li{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:#CBD8D1}
@@ -509,7 +510,7 @@ p{margin:0}
 .faq .faq-body{padding:0 40px 24px 0;color:var(--muted);font-size:.92rem;max-width:700px}
 .faq .faq-body p+p{margin-top:10px}
 
-/* ---------- CTA + форма ---------- */
+/* ---------- CTA + контакты ---------- */
 .cta-panel{
   position:relative;border-radius:30px;overflow:hidden;
   border:1px solid rgba(55,240,160,.26);
@@ -527,32 +528,23 @@ p{margin:0}
 .cta-points svg{width:18px;height:18px;stroke:var(--accent);flex:none}
 .cta-contacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .cta-contacts .btn{padding:12px 18px;font-size:.86rem;border-radius:12px}
-.form-card{
+
+.contact-card{
   background:rgba(6,10,8,.55);border:1px solid var(--line);border-radius:20px;
-  padding:24px;backdrop-filter:blur(10px);
+  padding:26px;backdrop-filter:blur(10px);
 }
-.form-card h3{font-size:1.05rem;margin-bottom:4px}
-.form-card .form-sub{font-size:.78rem;color:var(--muted-2);margin-bottom:18px}
-.field{margin-bottom:13px}
-.field label{display:block;font-size:.73rem;font-weight:700;letter-spacing:.04em;color:var(--muted);margin-bottom:6px}
-.field input,.field select{
-  width:100%;padding:12px 14px;border-radius:11px;border:1px solid var(--line);
-  background:rgba(255,255,255,.04);color:var(--text);font-family:inherit;font-size:.9rem;
-  transition:border-color .2s,background .2s;
+.contact-card h3{font-size:1.05rem;margin-bottom:4px}
+.contact-card .contact-sub{font-size:.78rem;color:var(--muted-2);margin-bottom:20px;line-height:1.5}
+.contact-main{
+  width:100%;padding:15px 16px;font-size:1rem;border-radius:12px;
+  justify-content:center;
 }
-.field input::placeholder{color:var(--muted-2)}
-.field input:focus,.field select:focus{outline:none;border-color:rgba(55,240,160,.6);background:rgba(55,240,160,.05)}
-.field select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2398A69F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.consent{display:flex;gap:9px;align-items:flex-start;font-size:.72rem;color:var(--muted-2);margin:14px 0 16px;line-height:1.5}
-.consent input{margin-top:2px;accent-color:var(--accent);width:15px;height:15px;flex:none}
-.link-btn{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font-size:inherit;font-family:inherit}
-.link-btn:hover{color:var(--accent)}
-.form-card .btn{width:100%;padding:14px}
-.form-status{font-size:.78rem;margin-top:12px;color:var(--accent);min-height:1.2em;line-height:1.45}
-.form-status.error{color:#FF9B87}
-.form-alt{font-size:.76rem;color:var(--muted-2);margin-top:10px;text-align:center}
-.form-alt a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(55,240,160,.35)}
-.form-alt a:hover{border-bottom-color:var(--accent)}
+.contact-links{display:flex;flex-direction:column;gap:9px;margin-top:11px}
+.contact-links .btn{width:100%;justify-content:flex-start;padding:12px 16px;font-size:.88rem;border-radius:11px}
+.contact-note{
+  font-size:.76rem;color:var(--muted-2);margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--line-soft);line-height:1.5;
+}
 
 /* ---------- подвал ---------- */
 .site-footer{border-top:1px solid var(--line-soft);padding:52px 0 28px;margin-top:clamp(20px,4vw,50px)}
@@ -626,7 +618,7 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-brand{grid-column:1/-1}
   .cta-panel{grid-template-columns:1fr}
-  .form-card{max-width:520px}
+  .contact-card{max-width:520px}
   .mobile-cta{display:flex}
   body{padding-bottom:0}
   .site-footer{padding-bottom:96px}
@@ -663,7 +655,7 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
   .visual{min-height:540px}
   .visual-hint{font-size:.68rem;bottom:-6px}
   .cta-panel{padding:24px 20px;border-radius:24px}
-  .form-card{padding:20px}
+  .contact-card{padding:20px}
   .faq summary{font-size:.94rem;padding-right:38px}
   .footer-grid{gap:26px}
   .footer-bottom{justify-content:flex-start}
@@ -756,11 +748,11 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
       <a href="#problem">Проблема</a>
       <a href="#how">Как работает</a>
       <a href="#features">Возможности</a>
-      <a href="#pricing">Тарифы</a>
+      <a href="#pricing">Комплекты</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary" href="#contact">Заказать карты</a>
+      <a class="btn btn-primary" href="#contact">Связаться</a>
       <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -773,9 +765,9 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
   <a href="#how">Как это работает</a>
   <a href="#features">Возможности</a>
   <a href="#compare">Сравнение</a>
-  <a href="#pricing">Тарифы</a>
+  <a href="#pricing">Комплекты</a>
   <a href="#faq">Вопросы</a>
-  <a class="btn btn-primary" href="#contact">Заказать карты</a>
+  <a class="btn btn-primary" href="#contact">Связаться</a>
   <div class="menu-contacts">
     <a href="tel:+79000000000" data-phone-link data-phone-text>+7 (900) 000-00-00</a>
     <a href="https://t.me/tapcard" data-tg-link>Telegram: @tapcard</a>
@@ -792,13 +784,13 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
         <h1>Один тап — и отзыв <span class="accent">уже на карте</span></h1>
         <p class="lead">NFC-карта для бизнеса: клиент прикладывает телефон — открывается ваша карточка в <strong>Яндекс Картах</strong> или <strong>2ГИС</strong>. Остаётся поставить оценку и нажать «Отправить».</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Заказать карты <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-primary" href="#contact">Связаться с нами <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="#how">Как это работает</a>
         </div>
         <div class="hero-note">
           <span><svg><use href="#i-check"/></svg> от 1 карты</span>
           <span><svg><use href="#i-check"/></svg> изготовление 3–7 дней</span>
-          <span><svg><use href="#i-check"/></svg> доставка по России</span>
+          <span><svg><use href="#i-check"/></svg> настройка при встрече</span>
         </div>
         <div class="hero-stats">
           <div class="stat"><b>2 клика</b><span>до отзыва</span></div>
@@ -1150,36 +1142,36 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
     </div>
   </section>
 
-  <!-- ТАРИФЫ -->
+  <!-- КОМПЛЕКТЫ -->
   <section class="section" id="pricing">
     <div class="container">
       <div class="section-head reveal">
-        <div class="eyebrow">Тарифы</div>
+        <div class="eyebrow">Комплекты</div>
         <h2>Выберите комплект</h2>
-        <p>Начните с одной карты или сразу оснастите все точки. Дизайн в подарок при заказе от 10 карт.</p>
+        <p>Начните с одной карты или сразу оснастите все точки. Состав и стоимость обсуждаем при встрече — показываем образцы и настраиваем карты при вас.</p>
       </div>
       <div class="pricing-grid">
         <article class="price-card reveal" style="--d:.03s">
           <div class="price-name">Старт</div>
           <div class="price-desc">Попробовать формат на одной точке</div>
-          <div class="price-value"><b>1 990 ₽</b><s>2 490 ₽</s></div>
+          <div class="price-ask">Цена по запросу</div>
           <div class="price-unit">1 карта · всё включено</div>
           <ul class="price-list">
             <li><svg><use href="#i-check"/></svg> 1 NFC-карта с QR на обороте</li>
             <li><svg><use href="#i-check"/></svg> Настройка на Яндекс Карты или 2ГИС</li>
             <li><svg><use href="#i-check"/></svg> Базовая подставка</li>
             <li><svg><use href="#i-check"/></svg> Инструкция для персонала</li>
-            <li><svg><use href="#i-check"/></svg> Доставка по России</li>
+            <li><svg><use href="#i-check"/></svg> Настройка при встрече</li>
           </ul>
-          <a class="btn btn-ghost" href="#contact">Заказать «Старт»</a>
+          <a class="btn btn-ghost" href="#contact">Обсудить «Старт»</a>
         </article>
 
         <article class="price-card featured reveal" style="--d:.1s">
-          <div class="price-badge">Хит заказов</div>
+          <div class="price-badge">Чаще выбирают</div>
           <div class="price-name">Бизнес</div>
           <div class="price-desc">Для салона, кафе или клиники с одной точкой</div>
-          <div class="price-value"><b>8 900 ₽</b><s>11 900 ₽</s></div>
-          <div class="price-unit">5 карт · 1 780 ₽ за карту</div>
+          <div class="price-ask">Цена по запросу</div>
+          <div class="price-unit">5 карт · под ключ</div>
           <ul class="price-list">
             <li><svg><use href="#i-check"/></svg> 5 NFC-карт с QR на обороте</li>
             <li><svg><use href="#i-check"/></svg> Настройка на обе площадки</li>
@@ -1187,14 +1179,14 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
             <li><svg><use href="#i-check"/></svg> 5 подставок в комплекте</li>
             <li><svg><use href="#i-check"/></svg> Приоритетная поддержка</li>
           </ul>
-          <a class="btn btn-primary" href="#contact">Заказать «Бизнес» <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-primary" href="#contact">Обсудить «Бизнес» <svg><use href="#i-arrow"/></svg></a>
         </article>
 
         <article class="price-card reveal" style="--d:.17s">
           <div class="price-name">Сеть</div>
           <div class="price-desc">Для нескольких филиалов и франшиз</div>
-          <div class="price-value"><b>29 900 ₽</b><s>36 900 ₽</s></div>
-          <div class="price-unit">20 карт · 1 495 ₽ за карту</div>
+          <div class="price-ask">Цена по запросу</div>
+          <div class="price-unit">20 карт · под ключ</div>
           <ul class="price-list">
             <li><svg><use href="#i-check"/></svg> 20 NFC-карт с QR на обороте</li>
             <li><svg><use href="#i-check"/></svg> Индивидуальный дизайн</li>
@@ -1202,7 +1194,7 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
             <li><svg><use href="#i-check"/></svg> Подставки и инструкции</li>
             <li><svg><use href="#i-check"/></svg> Персональный менеджер</li>
           </ul>
-          <a class="btn btn-ghost" href="#contact">Заказать «Сеть»</a>
+          <a class="btn btn-ghost" href="#contact">Обсудить «Сеть»</a>
         </article>
       </div>
       <div class="pricing-note reveal">
@@ -1264,6 +1256,12 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
       </div>
       <div class="faq reveal">
         <details name="faq" open>
+          <summary>Как купить карты?</summary>
+          <div class="faq-body">
+            <p>Мы продаём лично — без онлайн-оплаты и доставки. Позвоните или напишите, договоримся о встрече, покажем образцы, подберём комплект и настроим карты при вас.</p>
+          </div>
+        </details>
+        <details name="faq">
           <summary>Что если у клиента нет NFC?</summary>
           <div class="faq-body">
             <p>На обороте каждой карты есть QR-код с той же ссылкой. Клиент наводит камеру — открывается та же карточка организации. Так работает на любом смартфоне.</p>
@@ -1290,7 +1288,7 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
         <details name="faq">
           <summary>Сколько времени занимает изготовление?</summary>
           <div class="faq-body">
-            <p>Обычно 3–7 рабочих дней с момента согласования макета. Если нужно срочно — напишите, постараемся ускорить. Доставка по России — 2–7 дней в зависимости от города.</p>
+            <p>Обычно 3–7 рабочих дней с момента согласования макета. Если нужно срочно — напишите, постараемся ускорить. Готовые карты передаём лично при встрече.</p>
           </div>
         </details>
         <details name="faq">
@@ -1314,60 +1312,34 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
     <div class="container">
       <div class="cta-panel reveal">
         <div class="cta-copy">
-          <div class="eyebrow">Заявка</div>
-          <h2>Превратите довольных клиентов в отзывы</h2>
-          <p>Оставьте заявку — подберём комплект под ваш бизнес, настроим ссылки и изготовим карты. Консультация бесплатная.</p>
+          <div class="eyebrow">Контакты</div>
+          <h2>Познакомимся лично</h2>
+          <p>Позвоните или напишите — договоримся о встрече, покажем образцы карт, подберём комплект и настроим всё при вас. Консультация бесплатная.</p>
           <ul class="cta-points">
             <li><svg><use href="#i-check"/></svg> Поможем выбрать площадку: Яндекс Карты, 2ГИС или обе</li>
             <li><svg><use href="#i-check"/></svg> Сделаем макет с вашим логотипом</li>
-            <li><svg><use href="#i-check"/></svg> Настроим и проверим карты до отправки</li>
+            <li><svg><use href="#i-check"/></svg> Настроим и проверим карты при встрече</li>
           </ul>
-          <div class="cta-contacts">
-            <a class="btn btn-ghost" href="tel:+79000000000" data-phone-link>
-              <svg><use href="#i-phone"/></svg> <span data-phone-text>+7 (900) 000-00-00</span>
-            </a>
+        </div>
+
+        <div class="contact-card">
+          <h3>Связаться напрямую</h3>
+          <p class="contact-sub">Работаем с бизнесом лично, без онлайн-оплаты и доставки</p>
+          <a class="btn btn-primary contact-main" href="tel:+79000000000" data-phone-link>
+            <svg><use href="#i-phone"/></svg> <span data-phone-text>+7 (900) 000-00-00</span>
+          </a>
+          <div class="contact-links">
             <a class="btn btn-ghost" href="https://t.me/tapcard" data-tg-link>
               <svg><use href="#i-tg"/></svg> Telegram
             </a>
             <a class="btn btn-ghost" href="https://wa.me/7900000000" data-wa-link>
               <svg><use href="#i-wa"/></svg> WhatsApp
             </a>
+            <a class="btn btn-ghost" href="mailto:hello@tapcard.ru" data-email-link>
+              <svg><use href="#i-mail"/></svg> <span data-email-text>hello@tapcard.ru</span>
+            </a>
           </div>
-        </div>
-
-        <div class="form-card">
-          <h3>Рассчитать заказ</h3>
-          <p class="form-sub">Ответим в течение рабочего дня</p>
-          <form id="leadForm" novalidate>
-            <div class="field">
-              <label for="name">Как вас зовут</label>
-              <input id="name" name="name" type="text" placeholder="Имя" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="phone">Телефон</label>
-              <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
-            </div>
-            <div class="field">
-              <label for="biz">Тип бизнеса</label>
-              <select id="biz" name="biz">
-                <option>Кофейня / ресторан</option>
-                <option>Салон красоты / барбершоп</option>
-                <option>Клиника / стоматология</option>
-                <option>Автосервис / шиномонтаж</option>
-                <option>Фитнес / студия</option>
-                <option>Магазин / услуги</option>
-                <option>Сеть / несколько точек</option>
-                <option>Другое</option>
-              </select>
-            </div>
-            <label class="consent">
-              <input type="checkbox" id="consent" required>
-              <span>Согласен с <button type="button" class="link-btn" id="privacyOpen">политикой конфиденциальности</button> и обработкой данных</span>
-            </label>
-            <button class="btn btn-primary" type="submit">Отправить заявку <svg><use href="#i-arrow"/></svg></button>
-            <p class="form-status" id="formStatus" role="status"></p>
-            <p class="form-alt">Или напишите сразу в <a href="https://t.me/tapcard" data-tg-link>Telegram</a></p>
-          </form>
+          <p class="contact-note">Пн–Пт, 10:00–19:00. Если не берём трубку — напишите в Telegram или WhatsApp, ответим и договоримся о встрече.</p>
         </div>
       </div>
     </div>
@@ -1388,7 +1360,7 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
         <h4>Навигация</h4>
         <a href="#how">Как это работает</a>
         <a href="#features">Возможности</a>
-        <a href="#pricing">Тарифы</a>
+        <a href="#pricing">Комплекты</a>
         <a href="#faq">Вопросы</a>
       </div>
       <div class="footer-col">
@@ -1408,16 +1380,16 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
 
 <div class="mobile-cta" id="mobileCta">
   <a class="btn btn-ghost" href="tel:+79000000000" data-phone-link>Позвонить</a>
-  <a class="btn btn-primary" href="#contact">Заказать карты</a>
+  <a class="btn btn-primary" href="https://t.me/tapcard" data-tg-link>Написать</a>
 </div>
 
 <dialog id="privacyDialog" aria-labelledby="privacyTitle">
   <div class="dialog-inner">
     <button class="dialog-close" id="privacyClose" aria-label="Закрыть">×</button>
     <h3 id="privacyTitle">Политика конфиденциальности</h3>
-    <p>Мы используем данные, которые вы указываете в форме заявки (имя, телефон, тип бизнеса), только для связи с вами и подготовки предложения.</p>
-    <p>Данные не передаются третьим лицам, кроме случаев, предусмотренных законом. Вы можете запросить удаление своих данных, написав нам на <a href="mailto:hello@tapcard.ru" data-email-link data-email-text style="color:var(--accent)">hello@tapcard.ru</a>.</p>
-    <p>Сайт может использовать обезличенную статистику посещений для улучшения работы. Отправляя форму, вы соглашаетесь с этой политикой.</p>
+    <p>На сайте нет форм регистрации и заявок, поэтому мы не собираем и не храним ваши персональные данные.</p>
+    <p>Если вы позвонили или написали нам в Telegram, WhatsApp или на почту, мы используем контакты только чтобы ответить и договориться о встрече. Данные не передаются третьим лицам, кроме случаев, предусмотренных законом.</p>
+    <p>Запросить удаление своих данных можно письмом на <a href="mailto:hello@tapcard.ru" data-email-link data-email-text style="color:var(--accent)">hello@tapcard.ru</a>. Сайт может вести обезличенную статистику посещений для улучшения работы.</p>
   </div>
 </dialog>
 
@@ -1568,55 +1540,6 @@ const CONFIG = {
     if (outside) dialog.close();
   });
 
-  /* ---------- форма → WhatsApp ---------- */
-  const form = $('#leadForm');
-  const status = $('#formStatus');
-
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    status.classList.remove('error');
-
-    const name = $('#name').value.trim();
-    const phone = $('#phone').value.trim();
-    const biz = $('#biz').value;
-    const consent = $('#consent').checked;
-    const digits = phone.replace(/\D/g, '');
-
-    if (!name) {
-      status.textContent = 'Напишите, как к вам обращаться.';
-      status.classList.add('error');
-      $('#name').focus();
-      return;
-    }
-    if (digits.length < 10) {
-      status.textContent = 'Проверьте номер телефона — нужно не меньше 10 цифр.';
-      status.classList.add('error');
-      $('#phone').focus();
-      return;
-    }
-    if (!consent) {
-      status.textContent = 'Поставьте галочку согласия на обработку данных.';
-      status.classList.add('error');
-      $('#consent').focus();
-      return;
-    }
-
-    const text = [
-      'Заявка с сайта ' + CONFIG.brand,
-      'Имя: ' + name,
-      'Телефон: ' + phone,
-      'Бизнес: ' + biz
-    ].join('\n');
-
-    const url = 'https://wa.me/' + CONFIG.phoneRaw + '?text=' + encodeURIComponent(text);
-    status.textContent = 'Открываем WhatsApp — останется нажать «Отправить».';
-    window.open(url, '_blank', 'noopener');
-
-    setTimeout(() => {
-      status.textContent = 'Если WhatsApp не открылся, напишите нам в Telegram: @' + CONFIG.telegram;
-      form.reset();
-    }, 1600);
-  });
 })();
 </script>
 </body>
