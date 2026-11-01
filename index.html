@@ -1316,14 +1316,14 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
             <a class="btn btn-ghost" href="https://t.me/tapcard" data-tg-link>
               <svg><use href="#i-tg"/></svg> Telegram
             </a>
-            <a class="btn btn-ghost" href="https://wa.me/7900000000" data-wa-link>
-              <svg><use href="#i-wa"/></svg> WhatsApp
+            <a class="btn btn-ghost" href="https://vk.me/562663617" data-wa-link>
+              <svg><use href="#i-wa"/></svg> VK
             </a>
             <a class="btn btn-ghost" href="mailto:hello@tapcard.ru" data-email-link>
               <svg><use href="#i-mail"/></svg> <span data-email-text>hello@tapcard.ru</span>
             </a>
           </div>
-          <p class="contact-note">Пн–Пт, 10:00–19:00. Если не берём трубку — напишите в Telegram или WhatsApp, ответим и договоримся о встрече.</p>
+          <p class="contact-note">Пн–Пт, 10:00–19:00. Если не берём трубку — напишите в Telegram или VK, ответим и договоримся о встрече.</p>
         </div>
       </div>
     </div>
@@ -1372,7 +1372,7 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
     <button class="dialog-close" id="privacyClose" aria-label="Закрыть">×</button>
     <h3 id="privacyTitle">Политика конфиденциальности</h3>
     <p>На сайте нет форм регистрации и заявок, поэтому мы не собираем и не храним ваши персональные данные.</p>
-    <p>Если вы позвонили или написали нам в Telegram, WhatsApp или на почту, мы используем контакты только чтобы ответить и договориться о встрече. Данные не передаются третьим лицам, кроме случаев, предусмотренных законом.</p>
+    <p>Если вы позвонили или написали нам в Telegram, VK или на почту, мы используем контакты только чтобы ответить и договориться о встрече. Данные не передаются третьим лицам, кроме случаев, предусмотренных законом.</p>
     <p>Запросить удаление своих данных можно письмом на <a href="mailto:hello@tapcard.ru" data-email-link data-email-text style="color:var(--accent)">hello@tapcard.ru</a>. Сайт может вести обезличенную статистику посещений для улучшения работы.</p>
   </div>
 </dialog>
@@ -1383,10 +1383,11 @@ dialog::backdrop{background:rgba(3,6,5,.72);backdrop-filter:blur(6px)}
    ============================================================ */
 const CONFIG = {
   brand: 'tapcard',
-  phoneDisplay: '+7 (900) 000-00-00',
-  phoneRaw: '7900000000',          // только цифры, для tel: и wa.me
-  telegram: 'tapcard',             // без @
-  email: 'hello@tapcard.ru'
+  phoneDisplay: '+8 952 435-18-92',
+  phoneRaw: '89524351892',          // только цифры, для tel: и vk.me
+  telegram: 'HIFONER',             // без @
+  email: 'hello@tapcard.ru',
+  vk: '562663617'
 };
 
 (function () {
@@ -1399,7 +1400,7 @@ const CONFIG = {
   $$('[data-phone-text]').forEach(el => el.textContent = CONFIG.phoneDisplay);
   $$('[data-phone-link]').forEach(el => el.href = 'tel:+' + CONFIG.phoneRaw);
   $$('[data-tg-link]').forEach(el => el.href = 'https://t.me/' + CONFIG.telegram);
-  $$('[data-wa-link]').forEach(el => el.href = 'https://wa.me/' + CONFIG.phoneRaw);
+  $$('[data-wa-link]').forEach(el => el.href = 'https://vk.me/' + CONFIG.vk);
   $$('[data-email-text]').forEach(el => el.textContent = CONFIG.email);
   $$('[data-email-link]').forEach(el => el.href = 'mailto:' + CONFIG.email);
   const tgLabel = $('.menu-contacts [data-tg-link]');
